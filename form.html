@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buat Account Baru</title>
+  <style>
+    /* === Gaya Umum Halaman === */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #89f7fe, #66a6ff); /* gradasi biru */
+      display: flex;
+      justify-content: center; /* konten ke tengah */
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    /* === Kotak Form === */
+    .form-container {
+      background: white;
+      padding: 30px;
+      border-radius: 12px; /* sudut bulat */
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1); /* bayangan */
+      width: 350px;
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #2c3e50;
+      margin-bottom: 15px;
+    }
+
+    label {
+      font-weight: bold;
+      color: #34495e;
+    }
+
+    input[type="text"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 8px;
+      margin: 6px 0 15px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    input[type="radio"],
+    input[type="checkbox"] {
+      margin-right: 6px;
+    }
+
+    textarea {
+      resize: none; /* biar ga bisa diubah ukuran */
+    }
+
+    /* === Tombol === */
+    button {
+      width: 100%;
+      padding: 10px;
+      background: #3498db; /* biru */
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #2980b9; /* biru lebih gelap saat hover */
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h1>Buat Account Baru</h1>
+    <h2>Sign Up Form</h2>
+
+    <form action="welcome.html" method="get">
+      <label for="fn">First Name:</label><br>
+      <input type="text" name="fn" required><br>
+
+      <label for="ln">Last Name:</label><br>
+      <input type="text" name="ln" required><br>
+
+      <label for="gd">Gender:</label><br>
+      <input type="radio" name="gd" value="Male">Male <br>
+      <input type="radio" name="gd" value="Female">Female <br><br>
+
+      <label for="nt">Nationality:</label><br>
+      <select name="nt" required>
+        <option value="ind">Indonesia</option>
+        <option value="amk">Amerika</option>
+        <option value="ing">Inggris</option>
+      </select><br>
+
+      <label for="lg">Language Spoken:</label><br>
+      <input type="checkbox" name="lg" value="ind">Bahasa Indonesia <br>
+      <input type="checkbox" name="lg" value="eng">English <br>
+      <input type="checkbox" name="lg" value="oth">Other <br><br>
+
+      <label for="bio">Bio:</label><br>
+      <textarea name="bio" cols="30" rows="5"></textarea><br>
+
+      <button type="submit">Sign Up</button>
+    </form>
+  </div>
+</body>
+</html>
